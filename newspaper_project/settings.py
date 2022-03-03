@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -131,13 +131,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-DEFAULT_FROM_EMAIL = '<email>'
-EMAIL_HOST = 'ahola6479@gmail.com'
-EMAIL_HOST_USER = 'ahola6479@gmail.com'
-EMAIL_HOST_PASSWORD = '<Administrador1234->'
+EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'django_emails'
+EMAIL_HOST_PASSWORD = os.environ.get('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')
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
