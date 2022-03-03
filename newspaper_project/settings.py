@@ -131,11 +131,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-EMAIL_HOST_USER = os.environ['ahola6479@gmail.com']
+
 EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'ahola6479@gmail.com'
+EMAIL_HOST_PASSWORD = 'Administrador1234-'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_PASSWORD = os.environ['Administrador1234-']
+
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
